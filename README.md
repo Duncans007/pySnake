@@ -5,7 +5,7 @@ To run: use file `main.py`
 Includes two classes, one for game and one for simple bot.
 `snake_game()`, `snake_bot()`
 
-After creation, update `snake_game()` object with `snake_game.update_game()`
+After creation, update `snake_game()` object on every frame with `snake_game.update_game()`
 
 Change direction of snake by using:
 
