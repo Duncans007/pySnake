@@ -7,6 +7,8 @@ Includes two classes, one for game and one for simple bot.
 
 After creation, update `snake_game()` object with `snake_game.update_game()`
 
-Change direction of snake by using `snake_game.change_direction("up/down/left/right")`
+Change direction of snake by using:
+`snake_game.change_direction("up/down/left/right")`
 
-Bot can be directly queried for moves using the above command with `snake_game.change_direction(snake_bot.get_move(snake_game))`
+Bot can be directly queried for moves using the above command with:
+`snake_game.change_direction(snake_bot.get_move(snake_game))`
