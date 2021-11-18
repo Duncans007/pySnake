@@ -1,16 +1,28 @@
 # pySnake
 
-To run: use file `main.py`
+pySnake includes two classes, one for game and one for simple bot.
+ - `snake_game()`, `snake_bot()`
 
-Includes two classes, one for game and one for simple bot.
-`snake_game()`, `snake_bot()`
+Dependencies:
+ - PyGame
 
-After creation, update `snake_game()` object on every frame with `snake_game.update_game()`
+To run: 
+ - Run file `main.py`
+   - This will run the game with the bot enabled.
+   - To disable the bot, `run_bot` can be set to `False` at the top of the file.
 
-Change direction of snake by using:
+Minimum working example:
+```python
+pygame.init()
+screen = pygame.display.set_mode((disp_width, disp_height))
+pygame.display.set_caption("Snake by Duncan")
+clock = pygame.time.Clock()
 
-`snake_game.change_direction("up/down/left/right")`
+snek = snake_game(screen, disp_width, disp_height, speed, fps, scale)
+bot = snake_bot(scale)
 
-Bot can be directly queried for moves using the above command with:
-
-`snake_game.change_direction(snake_bot.get_move(snake_game))`
+while True:
+  snek.change_direction(bot.get_move(snek))
+  snek.update_game()
+  clock.tick(fps)
+```
